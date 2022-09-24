@@ -133,7 +133,7 @@ export class RevealServer extends Disposable {
           html: markdownit.render(s.text),
           children: s.verticalChildren.map((c) => ({ ...c, html: markdownit.render(c.text) })),
         }))
-        res.render('index', { slides: htmlSlides, ...context.configuration, rootUrl: this.uri, init })
+        res.render('index', { slides: htmlSlides, ...context.configuration, rootUrl: this.uri, init, initType })
 
       }
     })
