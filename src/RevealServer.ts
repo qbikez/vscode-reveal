@@ -125,6 +125,7 @@ export class RevealServer extends Disposable {
           if (!init && fs.existsSync(initPath)) {
             init = fs.readFileSync(initPath, 'utf8')
             initType = 'module'
+          }
         }
 
         const htmlSlides = context.slides.map((s) => ({
